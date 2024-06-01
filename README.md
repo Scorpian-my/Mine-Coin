@@ -28,7 +28,7 @@
 
 ---
 
-| Linux | Mac | [Github-Codespace](https://github.com/codespaces) | Replit |
+| Linux | Mac | Replit |
 * `pkg install python` or `apt install python`
 * `pkg install git`
 * `[git clone https://github.com/Scorpian-my/Mine-Coin](https://github.com/Scorpian-my/Mine-Coin)`
