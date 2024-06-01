@@ -24,7 +24,7 @@
 *4: `Make sure that the links in the main.py file are equal to the output of your site`<br>
 *5: `If you have any problems, contact me on Telegram `<br>
 [Telegram](https://t.me/Dev_Scorpian)
-
+---
 
 ---
 
