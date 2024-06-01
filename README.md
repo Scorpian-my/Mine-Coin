@@ -15,16 +15,16 @@
 </p>
 
 <div align="left">
- 
-# HOW 2 USE
-1: First, put the php files and the photos folder in one place
-2: Add and import the scorpian-coin file in the database
-3: Edit the main.py file and enter the account information to deploy the bot
-4: Make sure that the links in the main.py file are equal to the output of your site
-5: If you have any problems, contact me on Telegram 
-(https://t.me/Dev_Scorpian)[Telegram]
 
-> NOTE: These videos don't fully explain to you on how to use the software.
+#How To Use?
+---
+*1: First, put the php files and the photos folder in one place
+*2: Add and import the scorpian-coin file in the database
+*3: Edit the main.py file and enter the account information to deploy the bot
+*4: Make sure that the links in the main.py file are equal to the output of your site
+*5: If you have any problems, contact me on Telegram 
+[Telegram](https://t.me/Dev_Scorpian)
+
 
 ### Linux/Codespace
 [Screen recording 2024-04-26 10.33.12 AM.webm](https://github.com/CPScript/Kitty-Tools/assets/83523587/c7ec5529-c29f-4623-9129-01cd96511e1b)
@@ -41,14 +41,7 @@
 
 * My pc is windoes pc blew up so i can't make a video for it yet
 </details>
-How To Use?
----
-1: First, put the php files and the photos folder in one place
-2: Add and import the scorpian-coin file in the database
-3: Edit the main.py file and enter the account information to deploy the bot
-4: Make sure that the links in the main.py file are equal to the output of your site
-5: If you have any problems, contact me on Telegram 
-(https://t.me/Dev_Scorpian)[Telegram]
+
 ---
 ---
 
