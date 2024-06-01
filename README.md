@@ -31,7 +31,7 @@ How To Use?
 | Linux | Mac | Replit |
 * `pkg install python` or `apt install python`
 * `pkg install git`
-* `[git clone https://github.com/Scorpian-my/Mine-Coin](https://github.com/Scorpian-my/Mine-Coin)`
+* `git clone https://github.com/Scorpian-my/Mine-Coin`
 * `cd Mine-Coin`
 * `python main.py`
 
@@ -42,7 +42,7 @@ How To Use?
 * Install TERMUX on your phone from F-Droid
 * Install python: `pkg install python`
 * Install git: `pkg install git`
-* clone the repo: `git clone https://github.com/Scorpian-my/Mine-Coin](https://github.com/Scorpian-my/Mine-Coin`
+* clone the repo: `git clone https://github.com/Scorpian-my/Mine-Coin`
 * Go to `LITE`'s dir: `cd Mine-Coin`
 * Run script: `python main.py`
 
