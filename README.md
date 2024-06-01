@@ -18,7 +18,7 @@
 
 #How To Use?
 ---
-1: `First, put the php files and the photos folder in one place`<br>
+* `1:First, put the php files and the photos folder in one place`<br>
 2: `Add and import the scorpian-coin file in the database`<br>
 3: `Edit the main.py file and enter the account information to deploy the bot`<br>
 4: `Make sure that the links in the main.py file are equal to the output of your site`<br>
