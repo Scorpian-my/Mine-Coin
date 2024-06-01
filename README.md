@@ -33,6 +33,7 @@ How To Use?
 * `pkg install git`
 * `git clone https://github.com/Scorpian-my/Mine-Coin`
 * `cd Mine-Coin`
+* `pip install -r requirements.txt`
 * `python main.py`
 
 ---
@@ -44,6 +45,7 @@ How To Use?
 * Install git: `pkg install git`
 * clone the repo: `git clone https://github.com/Scorpian-my/Mine-Coin`
 * Go to `LITE`'s dir: `cd Mine-Coin`
+* `pip install -r requirements.txt`
 * Run script: `python main.py`
 
 ---
@@ -53,7 +55,8 @@ How To Use?
 2. Install git here: `https://git-scm.com/download/win`
 3. In cmd(The command prompt) type: `git clone https://github.com/Scorpian-my/Mine-Coin`
 3. Gain access to the repo's dir: `cd Mine-Coin`
-4. Using cmd type `python main.py` into the terminal
+4. Install Librarys source `pip install -r requirements.txt`
+5. Using cmd type `python main.py` into the terminal
 (Do all of this in the same terminal)
 
 ---
