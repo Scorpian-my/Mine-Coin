@@ -8,10 +8,10 @@ Hey! Check out the rest of the things I have made on my profile [here!](https://
 # Welcome to the `Mine-Coin` repository
 ###### (scroll down to learn how to use)
 
-[Click me to visit page!](cpscript.github.io/Kitty-Tools/)
+[Click me to visit page!](thttps://github.com/Scorpian-my/Mine-Coin)
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/Scorpian-my/Mine-Coin/main/photos/logo.jpg" width="300px" height="300px" />
+ <img src="https://raw.githubusercontent.com/Scorpian-my/Mine-Coin/main/photos/logo.jpg" width="50%" height="50%" />
 </p>
 
 <div align="left">
