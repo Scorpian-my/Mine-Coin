@@ -5,13 +5,13 @@ Hey! Check out the rest of the things I have made on my profile [here!](https://
  
 
 
-# Welcome to the `Kitty-Tools` repository
+# Welcome to the `Mine-Coin` repository
 ###### (scroll down to learn how to use)
 
 [Click me to visit page!](cpscript.github.io/Kitty-Tools/)
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/Scorpian-my/Mine-Coin/main/photos/logo.jpg" />
+ <img src="https://raw.githubusercontent.com/Scorpian-my/Mine-Coin/main/photos/logo.jpg" width="300px" height="300px" />
 </p>
 
 <div align="left">
