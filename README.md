@@ -26,23 +26,6 @@
 [Telegram](https://t.me/Dev_Scorpian)
 
 
-### Linux/Codespace
-[Screen recording 2024-04-26 10.33.12 AM.webm](https://github.com/CPScript/Kitty-Tools/assets/83523587/c7ec5529-c29f-4623-9129-01cd96511e1b)
-
-* Codespace already has python and git installed so dont worry about that!
-* If you use a terminal on a Linux OS you will have to manualy install them.
-
-### Replit
-[Screen recording 2024-05-10 1.01.43 PM.webm](https://github.com/CPScript/Kitty-Tools/assets/83523587/97b8e7e0-f0ec-455f-b89f-da7126bc84c3)
-
-* On replit you will get an error, all you need to do is re-run the script using the "Run" button <3
-
-### Windows
-
-* My pc is windoes pc blew up so i can't make a video for it yet
-</details>
-
----
 ---
 
 | Linux | Mac | [Github-Codespace](https://github.com/codespaces) | Replit |
