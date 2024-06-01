@@ -11,7 +11,7 @@
 [Click me to visit page!](thttps://github.com/Scorpian-my/Mine-Coin)
 
 <p align="center">
- <img src="https://raw.githubusercontent.com/Scorpian-my/Mine-Coin/main/photos/logo.jpg" width="50%" height="50%" />
+ <img src="https://raw.githubusercontent.com/Scorpian-my/Mine-Coin/main/photos/logo.png" width="50%" height="50%" />
 </p>
 
 <div align="left">
