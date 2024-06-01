@@ -17,10 +17,12 @@
 <div align="left">
  
 # HOW 2 USE
-| Example videos |
-
-<details closed>
-<summary>Click me to extend!</summary>
+1: First, put the php files and the photos folder in one place
+2: Add and import the scorpian-coin file in the database
+3: Edit the main.py file and enter the account information to deploy the bot
+4: Make sure that the links in the main.py file are equal to the output of your site
+5: If you have any problems, contact me on Telegram 
+(https://t.me/Dev_Scorpian)[Telegram]
 
 > NOTE: These videos don't fully explain to you on how to use the software.
 
