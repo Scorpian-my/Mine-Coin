@@ -16,7 +16,7 @@
 
 <div align="left">
 
-#How To Use?
+How To Use?
 ---
 * `1:First, put the php files and the photos folder in one place`<br>
 * `2: Add and import the scorpian-coin file in the database`<br>
