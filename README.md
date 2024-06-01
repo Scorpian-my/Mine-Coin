@@ -51,7 +51,7 @@
 | Windows |
 1. Install python here: `https://www.python.org/downloads/` (Make sure to install python with administrator)
 2. Install git here: `https://git-scm.com/download/win`
-3. In cmd(The command prompt) type: `git clone https://github.com/CPScript/Kitty-Tools(https://github.com/Scorpian-my/Mine-Coin`
+3. In cmd(The command prompt) type: `git clone https://github.com/Scorpian-my/Mine-Coin`
 3. Gain access to the repo's dir: `cd Mine-Coin`
 4. Using cmd type `python main.py` into the terminal
 (Do all of this in the same terminal)
