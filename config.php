@@ -1,5 +1,8 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "", "scorpian-coin");
+$jsonData = file_get_contents('config/config.json');
+
+$data = json_decode($jsonData);
+$connect = mysqli_connect("localhost", $data->DataBase->database_username, $data->DataBase->database_password, $data->DataBase->database_name);
 function info($user)
 {
     global $connect;
@@ -21,7 +24,7 @@ function users($user)
     if (in_array($user, $usernames)) {
         return 1;
     } else {
-        mysqli_query($connect, "INSERT INTO `users`(`username`, `balanse`,`invites`) VALUES ('$user','0','0')");
+        mysqli_query($connect, "INSERT INTO `users`(`username`, `balanse`,`charge`,`invites`) VALUES ('$user','0','5000',0)");
         return  0;
     }
 }
