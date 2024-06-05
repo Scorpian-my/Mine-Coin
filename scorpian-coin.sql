@@ -17,7 +17,7 @@ CREATE TABLE `users` (
 INSERT INTO
   `users` (`username`, `balanse`, `charge`, `invites`, `id`)
 VALUES
-  ('Dev_Scorpian', '483', 5000, 0, 1);
+  ('2071338928', '483', 5000, 0, 1);
 
 ALTER TABLE
   `users`
