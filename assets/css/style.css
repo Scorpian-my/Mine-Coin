@@ -2,8 +2,8 @@
 
 /* CSS Document */
 @font-face {
-    font-family: "amir";
-    src: url("/assets/amir.ttf");
+    font-family: "coin-font";
+    src: url("/assets/coin-font.ttf");
 }
 
 * {
@@ -29,7 +29,7 @@ html {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    font-family: amir;
+    font-family: coin-font;
 }
 
 body {
@@ -789,7 +789,7 @@ body {
 }
 
 h3 {
-    font-family: amir
+    font-family: coin-font
 }
 
 span {}
