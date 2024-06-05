@@ -1,39 +1,45 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton,ReplyKeyboardMarkup,WebAppInfo
 import pymysql
-api_id = '' #Api ID Account Main
-api_hash = ''#Api Hash Account Main
-bot_token = ''#Token Bot
+import json
 
 
-app = Client("Scorpian", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
+with open('config.json', 'r') as file:
+    data = json.load(file)
+
+database_name = data["DataBase"]['database_name']
+
+database_username = data["DataBase"]['database_username']
+
+database_password = data["DataBase"]['database_password']
+
+
+app = Client(data['Account']["chanell_link"], api_id=data['Account']["api_id"], api_hash=data['Account']["api_hash"], bot_token=data['Account']["token"])
 def balance(user):
     connection = pymysql.connect(host='localhost',
-                             user='scorpia5_scorpian-coin',
-                             password='Mahyar_85',
-                             database='scorpia5_scorpian-coin')
+                             user=database_username,
+                             password=database_password,
+                             database=database_name)
     with connection.cursor() as cursor:
-        cursor.execute(f'SELECT * FROM users WHERE username="{user}"')
+        cursor.execute('SELECT * FROM users WHERE username=%s', (user,))
         results = cursor.fetchall()
 
         for row in results:
             return row
     connection.close()
 def intvi(username):
-    connection = pymysql.connect(host='localhost',user='scorpia5_scorpian-coin',password='Mahyar_85',database='scorpia5_scorpian-coin')
-
+    connection = pymysql.connect(host='localhost',user=database_username,password=database_password,database=database_name)
     with connection.cursor() as cursor:
-        sql = f"UPDATE users SET invites = invites + 1 WHERE username = '{username}'"
-        cursor.execute(sql)
+        sql = "UPDATE users SET invites = invites + 1 WHERE username =%s"
+        cursor.execute(sql, (username,))
         connection.commit()
-        connection.close()
-
-
+    connection.close()
 
 async def check_member(client, message):
+
     try:
         user_id = message.from_user.id
-        user = await client.get_chat_member('ScopCoin', user_id)
+        user = await client.get_chat_member(data['Account']["chanell_link"], user_id)
         if user.status in ['member', 'creator', 'administrator']:
             return True
     except:
@@ -44,7 +50,7 @@ async def check_member(client, message):
         resize_keyboard=True
     )
         join = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Subscribe Channel 🤏", url="https://t.me/ScopCoin")]]
+            [[InlineKeyboardButton("Subscribe Channel 🤏", url="https://t.me/{}".format(data['Account']["chanell_link"]))]]
         )
         await message.reply("Welcome to Scorpian-Coin [SCOP-COIN] bot",user_id,reply_markup=mark)
         await message.reply_text("""
@@ -64,7 +70,7 @@ async def join(user,message):
             [
                 InlineKeyboardButton(
                     text="Join Community 🧸",
-                    url="https://t.me/ScopCoin"
+                    url="https://t.me/{}".format(data['Account']["chanell_link"])
                 )
             ],
             [
@@ -107,8 +113,8 @@ async def Intvite(client, message):
     
     
     if message.text == "Invite 🔊":
-        await message.reply("🌟 Make mining a team effort! Invite your friends to ScopCoin and earn 1/8 of their total mining amount as a bonus. Let's grow our community and wealth together! 🚀\n\n"f"Your exclusive referral link: https://t.me/ScorpianCoin_bot?start={user.id}\n\n""Start sharing and watch your earnings multiply! 🌱",reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Share With Your Freinds 🫂", url=f"https://t.me/share/url?url=https://t.me/ScorpianCoin_bot?start={user.id}&text=Join%20me%20in%20ScopCoin%20and%20start%20mining%20today!%20Let's%20earn%20together!")]]
+        await message.reply("🌟 Make mining a team effort! Invite your friends to ScopCoin and earn 1/8 of their total mining amount as a bonus. Let's grow our community and wealth together! 🚀\n\n"f"Your exclusive referral link: https://t.me/{data['Account']["bot_link"]}?start={user.id}\n\n""Start sharing and watch your earnings multiply! 🌱",reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("Share With Your Freinds 🫂", url=f"https://t.me/share/url?url=https://t.me/{data['Account']["bot_link"]}?start={user.id}&text=Join%20me%20in%20ScopCoin%20and%20start%20mining%20today!%20Let's%20earn%20together!")]]
         ))
     if message.text == "Withdraw 👜":
         await message.reply("Coming Soon Listed Coin 🪙",user.id)
@@ -123,7 +129,7 @@ async def Intvite(client, message):
         )
         await message.reply(f"Every 500 Scorpian-Coins equal = $10\nYour balance: {balance(user.username)[1]} 🪙\n"
 f"Number of invitations: {balance(user.username)[2]} 🫂\n"
-f"Your referral link: https://t.me/ScorpianCoin_bot?start={user.id} 🎈\n",user.id,reply_markup=reply_markup)
+f"Your referral link: https://t.me/{data['Account']["bot_link"]}?start={user.id} 🎈\n",user.id,reply_markup=reply_markup)
     else:
         await message.reply("To receive inventory, first collect coins, then request inventory 🦂🪙")
         
