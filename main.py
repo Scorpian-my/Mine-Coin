@@ -64,7 +64,7 @@ async def join(user,message):
             [
                 InlineKeyboardButton(
                     text="Play 🫵",
-                    web_app=WebAppInfo(url=f"https://127.0.0.1/index.php?user={user.username}")
+                    web_app=WebAppInfo(url=f"https://127.0.0.1/index.php?user={user.id}")
                 )
             ],
             [
