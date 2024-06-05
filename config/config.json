@@ -1,0 +1,16 @@
+{
+    "DataBase": {
+        "database_name": "scorpian-coin",
+        "database_username": "root",
+        "database_password": ""
+    },
+    "URL": "https://example.com",
+    "Account": {
+        "api_id": 12345,
+        "api_hash": "",
+        "token": ":",
+        "admin_username" : "",
+        "chanell_link": "",
+        "bot_link": ""
+    }
+}
