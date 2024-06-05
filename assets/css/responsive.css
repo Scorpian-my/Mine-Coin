@@ -1,0 +1,23 @@
+@media screen and (min-width: 764px) {
+    body,
+    .boost, 
+    .guid,
+    .frens,
+    .earn,
+    .login-page {
+        max-width: 450px;
+        margin: 0 auto;
+        background-color: #191919!important;
+        background-size: 450px;
+        background-position: center;
+    }
+    .squad-container {
+        margin: 0.5rem auto;
+    }
+    .slide  {
+        width: 19.5rem!important;
+    }
+    .frens-invite-button {
+        width: 26.5rem;
+    }
+}
