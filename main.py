@@ -4,7 +4,7 @@ import pymysql
 import json
 
 
-with open('config.json', 'r') as file:
+with open('config/config.json', 'r') as file:
     data = json.load(file)
 
 database_name = data["DataBase"]['database_name']
@@ -56,7 +56,6 @@ async def check_member(client, message):
         await message.reply_text("""
         To use the bot, you must first join the channel 🦂🪙
         """, reply_markup=join)
-        
         return False
 async def join(user,message):
     inline_keyboard = InlineKeyboardMarkup(
@@ -64,7 +63,8 @@ async def join(user,message):
             [
                 InlineKeyboardButton(
                     text="Play 🫵",
-                    web_app=WebAppInfo(url=f"https://127.0.0.1/index.php?user={user.id}")
+                    web_app=WebAppInfo(url=f"{data['URL']}/index.php?chat_id={user.id}&username={user.first_name}")
+
                 )
             ],
             [
@@ -76,13 +76,13 @@ async def join(user,message):
             [
                 InlineKeyboardButton(
                     text="Support 🔊",
-                    url="https://t.me/Dev_Scorpian"
+                    url="https://t.me/{}".format(data["Account"]["admin_username"])
                 )
             ]
         ]
     )
     await message.reply_photo(
-            "photos/logo.jpg",
+            "photos/scorpian.png",
             caption=f"Hey @{user.username}! Welcome to SCOPN-Coin👩🏽‍🚀\n\n🫵🏻 Tap the SCOPN-Coin to see your balance grow.\n"
                     "SCOPN-Coin is the first Decentralized Application based on a unique model where the community decides "
                     "on which blockchain the token will be listed - 💎 Ton, 🧬 Solana, or 🔹 Ethereum\nMaybe all of them? \n"
@@ -113,8 +113,8 @@ async def Intvite(client, message):
     
     
     if message.text == "Invite 🔊":
-        await message.reply("🌟 Make mining a team effort! Invite your friends to ScopCoin and earn 1/8 of their total mining amount as a bonus. Let's grow our community and wealth together! 🚀\n\n"f"Your exclusive referral link: https://t.me/{data['Account']["bot_link"]}?start={user.id}\n\n""Start sharing and watch your earnings multiply! 🌱",reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Share With Your Freinds 🫂", url=f"https://t.me/share/url?url=https://t.me/{data['Account']["bot_link"]}?start={user.id}&text=Join%20me%20in%20ScopCoin%20and%20start%20mining%20today!%20Let's%20earn%20together!")]]
+        await message.reply("🌟 Make mining a team effort! Invite your friends to ScopCoin and earn 1/8 of their total mining amount as a bonus. Let's grow our community and wealth together! 🚀\n\n"f"Your exclusive referral link: https://t.me/{data['Account']['bot_link']}?start={user.id}\n\n""Start sharing and watch your earnings multiply! 🌱",reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("Share With Your Freinds 🫂", url="https://t.me/share/url?url=https://t.me/{}?start={}&text=Join%20me%20in%20ScopCoin%20and%20start%20mining%20today!%20Let's%20earn%20together!".format(data['Account']["bot_link"],user.id))]]
         ))
     if message.text == "Withdraw 👜":
         await message.reply("Coming Soon Listed Coin 🪙",user.id)
@@ -127,12 +127,13 @@ async def Intvite(client, message):
                 ]
             ]
         )
-        await message.reply(f"Every 500 Scorpian-Coins equal = $10\nYour balance: {balance(user.username)[1]} 🪙\n"
-f"Number of invitations: {balance(user.username)[2]} 🫂\n"
-f"Your referral link: https://t.me/{data['Account']["bot_link"]}?start={user.id} 🎈\n",user.id,reply_markup=reply_markup)
-    else:
-        await message.reply("To receive inventory, first collect coins, then request inventory 🦂🪙")
-        
+        if(balance(user.id)):
+            await message.reply(f"Every 500 Scorpian-Coins equal = $10\nYour balance: {balance(user.id)[1]} 🪙\n"
+f"Number of invitations: {balance(user.id)[2]} 🫂\n"
+f"Your exclusive referral link: https://t.me/{data['Account']['bot_link']}?start={user.id}\n\n"f"?start={user.id} 🎈\n",user.id,reply_markup=reply_markup)
+        else:
+            await message.reply("To receive inventory, first collect coins, then request inventory 🦂🪙")
+
 @ app.on_callback_query()
 async def buttons(bot, update):
     if update.data == "Withdraw":
