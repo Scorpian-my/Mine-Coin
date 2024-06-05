@@ -13,6 +13,7 @@ if (isset($_GET["chat_id"]) and isset($_GET["username"])) {
         header('Location: index.php?chat_id=' . $chat_id);
     }
 } else {
+    echo "<script>alert('Welcome')</script>";
     header('Location: https://t.me/' . $data->Account->chanell_link);
 }
 ?>
