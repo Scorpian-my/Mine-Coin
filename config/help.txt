@@ -1,0 +1,2 @@
+Example url:
+http://127.0.0.1/learn/IR/Project/index.php?chat_id=5110291403&username=Dev_Scorpian
