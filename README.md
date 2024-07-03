@@ -61,9 +61,6 @@ How To Use?
 
 ---
 
-
-
----
 <p align="center">
   &copy; 2024 Mine-Coin. All rights reserved.
 </p>
